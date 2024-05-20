@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}{{ tag }} - {{ SITENAME|striptags }}{% endblock %}
+
+{% block content %}
+
+    <section class="section pt-0">
+        <div class="content">
+        <h2>Все заметки, связанные с тегом {{ tag }}</h2>
+            <ul>
+                {% for article in articles %}
+                    <li><a class="has-text-info" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}
+                        ({{ article.locale_date }})</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+{% endblock %}

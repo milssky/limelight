@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+    {% block head %}
+        <meta charset="UTF-8">
+        <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.0/css/bulma.min.css"
+              integrity="sha512-+oEiKVGJRHutsibRYkkTIfjI0kspDtgJtkIlyPCNTCFCdhy+nSe25nvrCw7UpHPwNbdmNw9AkgGA+ptQxcjPug=="
+              crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+        <!-- and it's easy to individually load additional languages -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js/dist/highlightjs-line-numbers.min.js"></script>
+
+        <script>
+            hljs.highlightAll();
+        </script>
+        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/custom.css" />
+    {% endblock head %}
+</head>
+<body>
+<div class="container is-fullhd">
+    <header class="section pb-5">
+        <div class="content is-size-3-mobile is-size-2-tablet is-size-4-desktop">
+            <h1 class="title"><a class="has-text-primary" href="/">{{ SITENAME }}</a></h1>
+            <h6 class="subtitle mb-1">Программируем и говорим об ужасах высшего образования</h6>
+            <div class="tags mt-4">
+                <span class="tag is-primary is-light is-hoverable is-size-5"><a class="has-text-black" href="{{ SITEURL }}/pages/ob-avtore.html">Об авторе</a></span>
+                <span class="tag is-primary is-light is-hoverable is-size-5"><a class="has-text-black" href="{{ SITEURL }}/archives.html">Все публикации</a></span>
+                <span class="tag is-primary is-light is-hoverable is-size-5"><a class="has-text-black" href="https://t.me/very_unsecret" target="_blank">Telegram</a></span>
+                <span class="tag is-primary is-light is-hoverable is-size-5"><a class="has-text-black" href="https://github.com/milssky/" target="_blank">Github</a></span>
+            </div>
+        </div>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+</div>
+<footer class="footer py-4">
+    <div class="content has-text-centered">
+        <p>Сгенерировано с помощью <a class="has-text-primary" href="http://docs.getpelican.com/">Pelican</a></p>
+    </div>
+</footer>
+</body>
+</html>

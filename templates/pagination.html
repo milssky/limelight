@@ -1,0 +1,14 @@
+<section class="section py-5">
+    <nav class="pagination is-small" role="navigation" aria-label="pagination">
+        {% if articles_page.has_previous() %}
+            <a href="{{ SITEURL }}/{{ articles_previous_page.url }}" class="pagination-previous is-size-5">Туда</a>
+        {% else %}
+            <a href="{{ SITEURL }}/{{ articles_previous_page.url }}" class="pagination-previous is-disabled is-size-5">Туда</a>
+        {% endif %}
+        {% if articles_page.has_next() %}
+            <a href="{{ SITEURL }}/{{ articles_next_page.url }}" class="pagination-next is-size-5">Сюда</a>
+        {% else %}
+            <a href="{{ SITEURL }}/{{ articles_next_page.url }}" class="pagination-next is-disabled is-size-5">Сюда</a>
+        {% endif %}
+    </nav>
+</section>

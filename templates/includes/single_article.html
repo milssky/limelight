@@ -1,0 +1,30 @@
+
+    <section class="section pt-5">
+        <header class="content  is-size-3-mobile is-size-2-tablet is-size-4-desktop">
+            <h2>
+                <a class="has-text-primary" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+                   title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+            {% import 'translations.html' as translations with context %}
+            {{ translations.translations_for(article) }}
+            <time datetime="{{ article.date.isoformat() }}">
+                {{ article.locale_date }}
+            </time>
+            </p>
+        </header>
+        <div class="content is-size-3-mobile is-size-2-tablet is-size-4-desktop">
+            {{ article.content }}
+        </div>
+        <footer>
+
+
+            {% if article.tags %}
+                <p>
+                <div class="tags mt-2">
+                    {% for tag in article.tags %}
+                        <span class="tag is-primary is-hoverable is-size-5"><a href="{{ SITEURL }}/{{ tag.url }}" class="has-text-black">{{ tag }}</a></span>
+                    {% endfor %}
+                </div>
+                </p>
+            {% endif %}
+        </footer>
+    </section>
