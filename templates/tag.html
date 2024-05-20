@@ -5,11 +5,11 @@
 {% block content %}
 
     <section class="section pt-0">
-        <div class="content">
+        <div class="content is-size-3-mobile is-size-2-tablet is-size-4-desktop">
         <h2>Все заметки, связанные с тегом {{ tag }}</h2>
             <ul>
                 {% for article in articles %}
-                    <li><a class="has-text-info" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}
+                    <li><a class="has-text-primary" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}
                         ({{ article.locale_date }})</a></li>
                 {% endfor %}
             </ul>

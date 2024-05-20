@@ -2,10 +2,10 @@
 {% block title %}Все записи - {{ SITENAME|striptags }}{% endblock %}
 {% block content %}
     <section class="section pt-0">
-        <div class="content">
+        <div class="content is-size-3-mobile is-size-2-tablet is-size-4-desktop">
             <ul>
             {% for article in dates %}
-                <li><a class="has-text-info" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} ({{ article.locale_date }})</a></li>
+                <li><a class="has-text-primary" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} ({{ article.locale_date }})</a></li>
             {% endfor %}
             </ul>
         </div>
