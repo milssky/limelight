@@ -18,7 +18,7 @@ To install this theme, follow these steps:
 
 1. **Clone the Repository**:
    ```sh
-   git clone https://github.com/yourusername/pelican-blog-theme.git
+   git clone https://github.com/milssky/limelight.git
    ```
 
 2. **Copy the Theme to Your Pelican Project**:
@@ -28,7 +28,7 @@ To install this theme, follow these steps:
 
 3. **Update Your `pelicanconf.py`**:
    ```python
-   THEME = 'path/to/your/pelican/project/themes/pelican-blog-theme'
+   THEME = 'path/to/your/pelican/project/themes/limelight'
    ```
 
 ## License
