@@ -1,0 +1,9 @@
+.headerlink {
+    color: var(--bulma-primary);
+    text-decoration: none;
+    font-size: 0.8em;
+  }
+  
+  .headerlink:hover {
+    color: var(--bulma-primary-dark);
+  }
