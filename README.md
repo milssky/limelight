@@ -23,7 +23,7 @@ To install this theme, follow these steps:
 
 2. **Copy the Theme to Your Pelican Project**:
    ```sh
-   cp -r pelican-blog-theme /path/to/your/pelican/project/themes/
+   cp -r limelight /path/to/your/pelican/project/themes/
    ```
 
 3. **Update Your `pelicanconf.py`**:
